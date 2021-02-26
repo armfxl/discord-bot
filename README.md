@@ -31,8 +31,6 @@ In order to work with the Discord.js library and Discord API, we must first crea
 
 Keep the default settings for `Public Bot` checked and `Require OAuth2 Code Grant` unchecked.
 
---
-
 ### Step 2 | Installing the required packages.
 Install `discord.js` using `npm i discord.js`.  
 Install `fs` using `npm i fs`.
@@ -52,10 +50,16 @@ module.exports = {
 
 ---
 
-### Index Template
+### Step 4 | Creating your Index file.
+
+1. We need to define `Discord` as it's the main syntax prefix used in `discord.js`.
 ```js
-const { token, prefix } = require("../config/config.js");
 const Discord = require("discord.js");
+```
+
+```js
+const Discord = require("discord.js");
+const { token, prefix } = require("../config/config.js");
 const client = new Discord.Client();
 
 ["aliases", "commands"].forEach(x => client[x] = new Discord.Collection());
