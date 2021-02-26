@@ -2,7 +2,7 @@
 
 This tutorial will get you started with Discord.js development, setting you up with a decent bot template.
 
-### Step 1.
+### Step 1 | Creating the bot
 
 In order to work with the Discord.js library and Discord API, we must first create a Discord Bot account.
 
