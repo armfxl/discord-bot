@@ -31,6 +31,8 @@ In order to work with the Discord.js library and Discord API, we must first crea
 
 Keep the default settings for `Public Bot` checked and `Require OAuth2 Code Grant` unchecked.
 
+---
+
 ### Step 2 | Installing the required packages.
 Install `discord.js` using `npm i discord.js`.  
 Install `fs` using `npm i fs`.
