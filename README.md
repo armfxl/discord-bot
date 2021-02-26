@@ -15,6 +15,17 @@ In order to work with the Discord.js library and Discord API, we must first crea
 
 4. Give your application a name and click `Create`.
 
+![armful#0001](https://i.imgur.com/fEi6V6A.png)
+
+5. Navigate to the `Bot` tab and click `Add Bot`.
+   You will be promted with a confirmation window, press `Yes, do it!`.
+
+![armful#0001](https://i.imgur.com/NW0VDzN.png)
+
+6. Under the `Bot` tab copy your token by clicking `Copy`.
+
+Keep the default settings for `Public Bot` checked and `Require OAuth2 Code Grant` unchecked.
+
 ### Step 2.
 
 Install `discord.js` and `fs` using `npm i discord.js fs`.
