@@ -1,8 +1,9 @@
 ## Discord.js Bot Tutorial
 
 This tutorial will get you started with Discord.js development, setting you up with a decent bot template.
+Feel free to just download the code and take the parts you need if you are not interested in learning, or if you already know what you are doing.
 
-### Step 1 | Creating the bot
+### Step 1 | Creating the bot.
 
 In order to work with the Discord.js library and Discord API, we must first create a Discord Bot account.
 
