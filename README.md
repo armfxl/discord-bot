@@ -4,9 +4,17 @@ This tutorial will get you started with Discord.js development, setting you up w
 
 ### Step 1.
 
-Create your Discord Application at https://discord.com/developers/applications
+In order to work with the Discord.js library and Discord API, we must first create a Discord Bot account.
 
-### Step 1.
+1. Make sure you are logged in to [Discord](https://discord.com).
+2. Head over to the [Application Page](https://discord.com/developers/applications).
+
+3. Click the `New Application` button.
+![](https://i.imgur.com/T5b5eJi.png)
+
+4. Give your application a name and click `Create`.
+
+### Step 2.
 
 Install `discord.js` and `fs` using `npm i discord.js fs`.
 You can also install them seperately using `npm i discord.js` and `npm i fs`
