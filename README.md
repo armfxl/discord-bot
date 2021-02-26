@@ -30,20 +30,23 @@ const client = new Discord.Client();
 client.login(config.token);
 ```
 
-### Event Example
+### Events
 
 Make sure you create a file with the event name you want to listen for.
-Example: `guildMemberAdd.js`
+Event files should be created under `events/file-name.js`
 
+Example: `ready.js`
 ```js
-const tokenfile = require("./token.json");
 const Discord = require("discord.js");
-const client = new Discord.Client();
 
-["aliases", "commands"].forEach(x => client[x] = new Discord.Collection());
-["console", "commands", "event"].forEach(x => require(`./handlers/${x}`)(client));
+module.exports = async client => {
 
-client.login(config.token);
+    console.log(`made by: armful#0001`);
+    console.log(`${client.user.tag} is active in ${client.guilds.cache.size} server(s)\nServing ${client.users.cache.size} user(s).`);
+
+client.user.setActivity(`by armful#0001`, { type:"WATCHING" });
+
+}
 ```
 
 ---
