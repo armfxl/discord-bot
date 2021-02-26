@@ -5,10 +5,14 @@ This tutorial will get you started with Discord.js development, setting you up w
 ### Step 1.
 
 Install `discord.js` using `npm i discord.js`
+
+---
     
 ### Step 2.
 
 Replace `token` and `prefix` in `config/config.js`
+
+---
 
 Example:
 ```js
@@ -17,6 +21,8 @@ module.exports = {
     prefix: "."
 }
 ```
+
+---
 
 ### Index Template
 ```js
@@ -29,6 +35,8 @@ const client = new Discord.Client();
 
 client.login(config.token);
 ```
+
+---
 
 ### Events
 
