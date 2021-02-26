@@ -52,7 +52,7 @@ module.exports = {
 
 ### Step 4 | Creating your Index file.
 
-1. We need to define `Discord`, `token`, and `client`.
+1. Firstly, we need to define `Discord`, `token`, and `client`.
 ```js
 const Discord = require("discord.js");
 const { token } = require("../config/config.js");
@@ -67,7 +67,7 @@ const client = new Discord.Client();
 
 3. We can finally log in to our bot using `token` which we have already defined.
 ```js
-client.login(config.token);
+client.login(token);
 ```
 
 ---
@@ -130,6 +130,7 @@ if (!member) {
 ```
 
 ### By: [armful#0001](https://github.com/armfxl)
+######Feel free to reach out to me for support.
 
 <p>
 <a href="https://nodei.co/npm/discord.js/"><img src="https://nodei.co/npm/discord.js.png?downloads=true&stars=true"></a>
