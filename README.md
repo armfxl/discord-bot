@@ -1,5 +1,6 @@
-## Discord.js Bot Tutorial
-This tutorial will get you started with Discord.js development, setting you up with a decent bot template. Feel free to just download the code and take the parts you need if you are not interested in learning, or if you already know what you are doing.
+## Discord.js Bot Guide
+This guide will get you started with Discord.js development, setting you up with a decent bot template.  
+Feel free to just download the code and take the parts you need if you are not interested in learning, or if you already know what you are doing.
 
 ###### What will we go over in this guide?
 - Creating a Discord Bot account.
@@ -31,7 +32,7 @@ In order to work with the Discord.js library and Discord API, we must first crea
 Keep the default settings for `Public Bot` checked and `Require OAuth2 Code Grant` unchecked.
 
 ### Step 2 | Installing the required packages.
-Install `discord.js` using `npm i discord.js`.
+Install `discord.js` using `npm i discord.js`.  
 Install `fs` using `npm i fs`.
 
 ---
@@ -65,7 +66,7 @@ client.login(config.token);
 
 ### Events
 
-Make sure you create a file with the event name you want to listen for.
+Make sure you create a file with the event name you want to listen for.  
 Event files should be created under `events/file-name.js`
 
 Example: `ready.js`
