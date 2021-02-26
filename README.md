@@ -52,25 +52,21 @@ module.exports = {
 
 ### Step 4 | Creating your Index file.
 
-1. We need to define `Discord` as it's the main syntax prefix used in `discord.js`.
+1. We need to define `Discord`, `token`, and `client`.
 ```js
 const Discord = require("discord.js");
-```
-
-2. We need to define `token`. We will use this later to log in to our bot.
-```js
 const { token } = require("../config/config.js");
-```
-
-3.
-```
 const client = new Discord.Client();
 ```
 
-```
+2. Next we need to add our handlers. In this case we are passing in **aliases** and **commands** for our modular help command, and **console**, **commands**, and **event** as our handlers.
+```js
 ["aliases", "commands"].forEach(x => client[x] = new Discord.Collection());
 ["console", "commands", "event"].forEach(x => require(`./handlers/${x}`)(client));
+```
 
+3. We can finally log in to our bot using `token` which we have already defined.
+```js
 client.login(config.token);
 ```
 
