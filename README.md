@@ -1,21 +1,91 @@
-### Discord.js Bot Template
+## Discord.js Bot Tutorial
 
-Get Discord.js here:
-<p>
-<a href="https://nodei.co/npm/discord.js/"><img src="https://nodei.co/npm/discord.js.png?downloads=true&stars=true"></a>
-</p>
+This tutorial will get you started with Discord.js development, setting you up with a decent bot template.
 
-### Example
+### Step 1.
+
+Install `discord.js` using `npm i discord.js`
+    
+### Step 2.
+
+Replace `token` and `prefix` in `config/config.js`
+
+Example:
 ```js
+module.exports = {
+    token: "ODAxODYyNTMzNDA1MDgxNjEw.YAm2rQ.9I4FhVNBFbvLZNmPUOY_jBtDi38",
+    prefix: "."
+}
+```
+
+### Index Template
+```js
+const { token, prefix } = require("../config/config.js");
 const Discord = require("discord.js");
 const client = new Discord.Client();
 
-client.on("ready", async () => {
-    console.log(`${client.user.tag} is ready`);
-});
+["aliases", "commands"].forEach(x => client[x] = new Discord.Collection());
+["console", "commands", "event"].forEach(x => require(`./handlers/${x}`)(client));
 
-client.login("your-token");
+client.login(config.token);
 ```
-<br>
+
+### Event Example
+
+Make sure you create a file with the event name you want to listen for.
+Example: `guildMemberAdd.js`
+
+```js
+const tokenfile = require("./token.json");
+const Discord = require("discord.js");
+const client = new Discord.Client();
+
+["aliases", "commands"].forEach(x => client[x] = new Discord.Collection());
+["console", "commands", "event"].forEach(x => require(`./handlers/${x}`)(client));
+
+client.login(config.token);
+```
+
+---
+
+### Command Example
+```js
+const Discord = require("discord.js");
+const { getMember } = require("../../callfunction.js");
+
+module.exports = {
+  config: {
+      name: "avatar",
+      category: "misc",
+      description: "displays @user's avatar.",
+      usage: "(@user)",
+      accessableby: "Members",
+      aliases: ["av"]
+  },
+run: async (client, message, args) => {
+
+const member = getMember(message, args.join(" "));
+
+if (!member) {
+      return message.channel.send(`${message.author}, that user was not found.\nUsage: \`.avatar @user\``);
+  } else if (member) {
+
+        let image = member.user.avatarURL({ format: 'png', dynamic: true, size: 1024 });
+
+        let embed = new Discord.MessageEmbed()
+            .setAuthor(`${member.user.username}#${member.user.discriminator}'s Avatar`)
+            .setColor(member.displayHexColor === '#000000' ? '#ffffff' : member.displayHexColor)
+            .setImage(image)
+
+        message.channel.send(embed);
+        
+      }
+    }
+  }
+```
 
 ### By: [armful#0001](https://github.com/armfxl)
+
+<p>
+<a href="https://nodei.co/npm/discord.js/"><img src="https://nodei.co/npm/discord.js.png?downloads=true&stars=true"></a>
+</p>
