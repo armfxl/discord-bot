@@ -57,11 +57,17 @@ module.exports = {
 const Discord = require("discord.js");
 ```
 
+2. We need to define `token`. We will use this later to log in to our bot.
 ```js
-const Discord = require("discord.js");
-const { token, prefix } = require("../config/config.js");
-const client = new Discord.Client();
+const { token } = require("../config/config.js");
+```
 
+3.
+```
+const client = new Discord.Client();
+```
+
+```
 ["aliases", "commands"].forEach(x => client[x] = new Discord.Collection());
 ["console", "commands", "event"].forEach(x => require(`./handlers/${x}`)(client));
 
