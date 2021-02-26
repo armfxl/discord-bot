@@ -130,7 +130,7 @@ if (!member) {
 ```
 
 ### By: [armful#0001](https://github.com/armfxl)
-######Feel free to reach out to me for support.
+###### Feel free to reach out to me for support.
 
 <p>
 <a href="https://nodei.co/npm/discord.js/"><img src="https://nodei.co/npm/discord.js.png?downloads=true&stars=true"></a>
