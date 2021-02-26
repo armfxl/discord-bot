@@ -39,7 +39,7 @@ Keep the default settings for `Public Bot` checked and `Require OAuth2 Code Gran
 Install `discord.js` using `npm i discord.js`.
 Install `fs` using `npm i fs`.
 
-Although **Discord.js** is the only *required* package, I recommend installing `fs`.
+###### although `discord.js` is the only *required* package, I recommend installing `fs`.
 
 ---
     
