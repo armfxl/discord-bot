@@ -4,7 +4,12 @@ This tutorial will get you started with Discord.js development, setting you up w
 
 ### Step 1.
 
-Install `discord.js` using `npm i discord.js`
+Create your Discord Application at https://discord.com/developers/applications
+
+### Step 1.
+
+Install `discord.js` and `fs` using `npm i discord.js fs`.
+You can also install them seperately using `npm i discord.js` and `npm i fs`
 
 ---
     
