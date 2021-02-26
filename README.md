@@ -18,7 +18,7 @@ In order to work with the Discord.js library and Discord API, we must first crea
 ![armful#0001](https://i.imgur.com/fEi6V6A.png)
 
 5. Navigate to the `Bot` tab and click `Add Bot`.
-You will be promted with a confirmation window, press `Yes, do it!`.
+    - You will be promted with a confirmation window, press `Yes, do it!`.
 
 ![armful#0001](https://i.imgur.com/NW0VDzN.png)
 
