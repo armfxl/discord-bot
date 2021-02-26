@@ -11,7 +11,7 @@ In order to work with the Discord.js library and Discord API, we must first crea
 
 3. Click the `New Application` button.
 
-![](https://i.imgur.com/T5b5eJi.png)
+![armful#0001](https://i.imgur.com/T5b5eJi.png)
 
 4. Give your application a name and click `Create`.
 
