@@ -10,6 +10,7 @@ In order to work with the Discord.js library and Discord API, we must first crea
 2. Head over to the [Application Page](https://discord.com/developers/applications).
 
 3. Click the `New Application` button.
+
 ![](https://i.imgur.com/T5b5eJi.png)
 
 4. Give your application a name and click `Create`.
