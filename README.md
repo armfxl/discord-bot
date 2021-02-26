@@ -12,8 +12,6 @@ Install `discord.js` using `npm i discord.js`
 
 Replace `token` and `prefix` in `config/config.js`
 
----
-
 Example:
 ```js
 module.exports = {
