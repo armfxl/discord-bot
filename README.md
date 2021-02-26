@@ -3,6 +3,11 @@
 This tutorial will get you started with Discord.js development, setting you up with a decent bot template.
 Feel free to just download the code and take the parts you need if you are not interested in learning, or if you already know what you are doing.
 
+###### What will we go over in this guide?
+
+- Creating a Discord Bot account.
+- Setting up your config.
+
 ### Step 1 | Creating the bot.
 
 In order to work with the Discord.js library and Discord API, we must first create a Discord Bot account.
@@ -29,10 +34,12 @@ In order to work with the Discord.js library and Discord API, we must first crea
 
 Keep the default settings for `Public Bot` checked and `Require OAuth2 Code Grant` unchecked.
 
-### Step 2.
+### Step 2 | Installing the required packages.
 
-Install `discord.js` and `fs` using `npm i discord.js fs`.
-You can also install them seperately using `npm i discord.js` and `npm i fs`
+Install `discord.js` using `npm i discord.js`.
+Install `fs` using `npm i fs`.
+
+Although **Discord.js** is the only *required* package, I recommend installing `fs`.
 
 ---
     
