@@ -1,5 +1,6 @@
 ### Discord.js Bot Template
 
+Get Discord.js here:
 <p>
 <a href="https://nodei.co/npm/discord.js/"><img src="https://nodei.co/npm/discord.js.png?downloads=true&stars=true"></a>
 </p>
@@ -17,4 +18,4 @@ client.login("your-token");
 ```
 <br>
 
-<h1>By: armful#0001</h1>
+### By: [armful#0001](https://github.com/armfxl)
