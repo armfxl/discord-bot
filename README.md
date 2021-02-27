@@ -2,11 +2,15 @@
 This guide will get you started with Discord.js development, setting you up with a decent bot template.  
 Feel free to just download the code and take the parts you need if you are not interested in following the guide, or if you already know what you are doing.
 
+Make sure you have installed [NPM](https://www.npmjs.com/get-npm) before following this guide.
+
 ###### What will we go over in this guide?
+- Installing NPM.
 - Creating a Discord Bot account.
-- Setting up your config.
+- Setting up required files.
 
 ### Step 1 | Creating the bot.
+
 In order to work with the Discord.js library and Discord API, we must first create a Discord Bot account.
 
 1. Make sure you are logged in to [Discord](https://discord.com).
@@ -65,7 +69,7 @@ module.exports = {
 
 ### Step 4 | Creating your Index file.
 
-1. Create a new file and name it `index.js`, and open it.
+1. Create a new file and name it `index.js`.
 
 2. Firstly, we need to define `Discord`, `token`, and `client`.
 ```js
@@ -114,6 +118,7 @@ client.user.setActivity(`by armful#0001`, { type:"WATCHING" });
 ---
 
 ### Command Example
+
 ```js
 const Discord = require("discord.js");
 const { getMember } = require("../../callfunction.js");
