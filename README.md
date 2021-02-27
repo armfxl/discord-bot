@@ -7,7 +7,8 @@ Make sure you have installed [NPM](https://www.npmjs.com/get-npm) before followi
 ###### What will we go over in this guide?
 - Installing NPM.
 - Creating a Discord Bot account.
-- Setting up required files.
+- Setting up required files and folders.
+- Creating basic commands.
 
 ### Step 1 | Creating the bot.
 
@@ -135,7 +136,8 @@ msg.edit(`Latency: \`${msg.createdTimestamp - message.createdTimestamp}ms\`\nAPI
 
 5. We can finally log in to our bot using `token` which we have already defined.
 ```js
-client.login(token); // Logs in using your token.
+// Logs in using your token.
+client.login(token);
 ```
 
 ---
