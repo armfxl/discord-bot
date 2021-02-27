@@ -37,16 +37,16 @@ Keep the default settings for `Public Bot` checked and `Require OAuth2 Code Gran
 
 ---
 
-### Step 2 | Setting up your Bot folder and Installing the required packages.
+### Step 2 | Setting up your Bot folder and Installing discord.js.
 
 1. Create a new folder and give it a name.
 
-2. Open `Command Prompt` and navigate to your bot folder using `cd file-path`.
+2. Within your bot folder, create a new folder and name it **config**.
+
+3. Open `Command Prompt` and navigate to your bot folder using `cd file-path`.
     - EX: `cd D:\bots\bot`
 
-3. Install `discord.js` using `npm i discord.js`.
-
-4. Install `fs` using `npm i fs`.
+4. Install `discord.js` using `npm i discord.js`.
 
 ---
 
@@ -90,10 +90,14 @@ const { token, prefix } = require("../config/config");
 const client = new Discord.Client();
 ```
 
-3. Next we need to add our handlers. In this case we are passing in **aliases** and **commands** for our modular help command, and **console**, **commands**, and **event** as our handlers.
+3. Logging when our bot starts.
 ```js
-["aliases", "commands"].forEach(x => client[x] = new Discord.Collection());
-["console", "commands", "event"].forEach(x => require(`./handlers/${x}`)(client));
+// This event will run if the bot starts and logs in successfully.
+console.log(`${client.user.username} is online.\nServing ${client.users.cache.size} user(s) in ${client.guilds.cache.size} server(s).`);
+
+// This will change the bot's status.
+// In this case we will display how many users have access to the bot.
+client.user.setActivity(`${client.users.cache.size} users.`, {   type: 'WATCHING'   });
 ```
 
 4. We can finally log in to our bot using `token` which we have already defined.
@@ -160,6 +164,16 @@ if (!member) {
     }
   }
 ```
+
+### Used later
+
+3. Next we need to add our handlers. In this case we are passing in **aliases** and **commands** for our modular help command, and **console**, **commands**, and **event** as our handlers.
+```js
+["aliases", "commands"].forEach(x => client[x] = new Discord.Collection());
+["console", "commands", "event"].forEach(x => require(`./handlers/${x}`)(client));
+```
+
+Install `fs` using `npm i fs`.
 
 ### By: [armful#0001](https://github.com/armfxl)
 ###### Feel free to reach out to me for support.
