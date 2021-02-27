@@ -50,7 +50,12 @@ module.exports = {
 
 ---
 
-### Step 4 | Creating your Index file.
+### Step 4 | Creating your Index and Config file.
+
+1. Create a new folder and give it a name.
+    - EX `TutorialBot`.
+
+2. Create a new file and name it `index.js`, leave it blank for now.
 
 1. Firstly, we need to define `Discord`, `token`, and `client`.
 ```js
