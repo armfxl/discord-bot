@@ -92,15 +92,39 @@ const client = new Discord.Client();
 
 3. Logging when our bot starts.
 ```js
+client.on('ready', () => {
+
 // This event will run if the bot starts and logs in successfully.
-console.log(`${client.user.username} is online.\nServing ${client.users.cache.size} user(s) in ${client.guilds.cache.size} server(s).`);
+console.log(`${client.user.username} is online and serving ${client.users.cache.size} user(s).`);
 
 // This will change the bot's status.
 // In this case we will display how many users have access to the bot.
 client.user.setActivity(`${client.users.cache.size} users.`, {   type: 'WATCHING'   });
+
+});
 ```
 
-4. We can finally log in to our bot using `token` which we have already defined.
+4. Handling message events.
+```js
+// This event will run on every single message received.
+client.on('message', async message => {
+
+// It's common practice to ignore other bots, this also makes your bot ignore itself.
+if(message.author.bot) return;
+
+// This ignores any message that does not start with our prefix.
+if(!message.content.startsWitch(prefix)) return;
+
+// This will separate our command name and our arguments for the command.
+// As an example, if our command is ".say hello world", we would get the following;
+// command = say
+// args = ['hello', 'world']
+const args = message.content.slice(prefix.length).trim().split(/ +/g);
+const command = args.shift().toLowerCase();
+});
+```
+
+5. We can finally log in to our bot using `token` which we have already defined.
 ```js
 client.login(token); // Logs in using your token.
 ```
