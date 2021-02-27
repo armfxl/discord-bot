@@ -125,8 +125,8 @@ client.on('message', async message => {
     // Let's make a simple command to make sure the bot works properly.
     if (command === 'ping') {
         
-        const msg = await message.channel.send('Calculating ping...');
-        msg.edit(`Latency: \`${msg.createdTimestamp - message.createdTimestamp}ms\`\nAPI Latency: \`${Math.round(client.ws.ping)}ms\``);
+    const msg = await message.channel.send('Calculating ping...');
+    msg.edit(`Latency: \`${msg.createdTimestamp - message.createdTimestamp}ms\`\nAPI Latency: \`${Math.round(client.ws.ping)}ms\``);
 
     }
 });
