@@ -113,7 +113,7 @@ client.on('message', async message => {
 if(message.author.bot) return;
 
 // This ignores any message that does not start with our prefix.
-if(!message.content.startsWitch(prefix)) return;
+if(!message.content.startsWith(prefix)) return;
 
 // This will separate our command name and our arguments for the command.
 // As an example, if our command is ".say hello world", we would get the following;
@@ -121,6 +121,7 @@ if(!message.content.startsWitch(prefix)) return;
 // args = ['hello', 'world']
 const args = message.content.slice(prefix.length).trim().split(/ +/g);
 const command = args.shift().toLowerCase();
+
 });
 ```
 
