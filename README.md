@@ -69,9 +69,14 @@ module.exports = {
 
 2. Firstly, we need to define `Discord`, `token`, and `client`.
 ```js
-const Discord = require("discord.js"); // Loads up the discord.js library
-const { token } = require("../config/config.js"); // Here we load the token from the config file, we will use this to log in. 
-const client = new Discord.Client(); // This is your client. When you see 'client.something', this is what we're refering to.
+// Loads up the discord.js library
+const Discord = require("discord.js");
+
+// Here we load the token from the config file, we will use this to log in. 
+const { token } = require("../config/config.js");
+
+// This is your client. When you see 'client.something', this is what we're refering to.
+const client = new Discord.Client();
 ```
 
 3. Next we need to add our handlers. In this case we are passing in **aliases** and **commands** for our modular help command, and **console**, **commands**, and **event** as our handlers.
