@@ -37,45 +37,21 @@ Install `fs` using `npm i fs`.
 
 ---
 
-### Step 4 | Creating your Index file.
+### Step 3 | Setting up your Config file.
 
 1. Create a new folder and give it a name.
-    - EX `MyBot`.
 
-2. Create a new file and name it `index.js`, leave it blank for now.
+2. Within your bot folder create another folder and name it `config`.
 
-3. Firstly, we need to define `Discord`, `token`, and `client`.
-```js
-const Discord = require("discord.js");
-const { token } = require("../config/config.js");
-const client = new Discord.Client();
-```
+3. Create a new file in your config folder and name it `config.js`.
 
-4. Next we need to add our handlers. In this case we are passing in **aliases** and **commands** for our modular help command, and **console**, **commands**, and **event** as our handlers.
-```js
-["aliases", "commands"].forEach(x => client[x] = new Discord.Collection());
-["console", "commands", "event"].forEach(x => require(`./handlers/${x}`)(client));
-```
-
-5. We can finally log in to our bot using `token` which we have already defined.
-```js
-client.login(token);
-```
-
----
-
-### Step 5 | Setting up your Config file.
-
-1. Create a new file in your bot folder and name it `config.js`.
-
-2. Copy the code below and replace `your-token` with your bot's token, and `your-prefix` with your desired prefix.
+4. Copy the code below and replace `your-token` with your bot's token, and `your-prefix` with your desired prefix.
 ```js
 module.exports = {
     token: "your-token",
     prefix: "your-prefix"
 }
 ```
-
 
 Example:
 ```js
@@ -84,6 +60,32 @@ module.exports = {
     prefix: "!"
 }
 ```
+
+---
+
+### Step 4 | Creating your Index file.
+
+1. Create a new file and name it `index.js`, and open it.
+
+2. Firstly, we need to define `Discord`, `token`, and `client`.
+```js
+const Discord = require("discord.js"); // Loads up the discord.js library
+const { token } = require("../config/config.js"); // Here we load the token from the config file, we will use this to log in. 
+const client = new Discord.Client(); // This is your client. When you see 'client.something', this is what we're refering to.
+```
+
+3. Next we need to add our handlers. In this case we are passing in **aliases** and **commands** for our modular help command, and **console**, **commands**, and **event** as our handlers.
+```js
+["aliases", "commands"].forEach(x => client[x] = new Discord.Collection());
+["console", "commands", "event"].forEach(x => require(`./handlers/${x}`)(client));
+```
+
+4. We can finally log in to our bot using `token` which we have already defined.
+```js
+client.login(token); // Logs in using your token.
+```
+
+---
 
 ### Events
 
