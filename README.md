@@ -122,6 +122,13 @@ if(!message.content.startsWith(prefix)) return;
 const args = message.content.slice(prefix.length).trim().split(/ +/g);
 const command = args.shift().toLowerCase();
 
+// Let's make a simple command to make sure the bot works properly.
+if (command === 'ping') {
+    
+    const msg = awate message.channel.send('Calculating ping...');
+    msg.edit(`Latency: \`${msg.createdTimestamp - message.createdTimestamp}ms\`\nAPI Latency: \`${Math.round(client.ping)}ms\`);
+}
+
 });
 ```
 
