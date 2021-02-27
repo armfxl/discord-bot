@@ -37,9 +37,20 @@ Keep the default settings for `Public Bot` checked and `Require OAuth2 Code Gran
 
 ---
 
-### Step 2 | Setting up your Config file.
+### Step 2 | Setting up your Bot folder and Installing the required packages.
 
 1. Create a new folder and give it a name.
+
+2. Open `Command Prompt` and navigate to your bot folder using `cd file-path`.
+    - EX: `cd D:\bots\bot`
+
+3. Install `discord.js` using `npm i discord.js`.
+
+4. Install `fs` using `npm i fs`.
+
+---
+
+### Step 3 | Setting up your Config file.
 
 2. Within your bot folder create another folder and name it `config`.
 
@@ -63,13 +74,7 @@ module.exports = {
 
 ---
 
-### Step 3 | Installing the required packages.
-Install `discord.js` using `npm i discord.js`.  
-Install `fs` using `npm i fs`.
-
----
-
-### Step 4 | Creating your Index file.
+### Step 5 | Creating your Index file.
 
 1. Create a new file and name it `index.js`.
 
