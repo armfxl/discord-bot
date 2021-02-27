@@ -68,7 +68,7 @@ client.login(token);
 
 1. Create a new file in your bot folder and name it `config.js`.
 
-2. Copy the code below and fill replace `your-token` and `your-prefix`.
+2. Copy the code below and replace `your-token` with your bot's token, and `your-prefix` with your desired prefix.
 ```js
 module.exports = {
     token: "your-token",
