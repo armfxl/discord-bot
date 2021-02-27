@@ -36,46 +36,54 @@ Install `discord.js` using `npm i discord.js`.
 Install `fs` using `npm i fs`.
 
 ---
-    
-### Step 3 | Setting up your Config file.
-Replace `token` and `prefix` in `config/config.js`
 
-Example:
-```js
-module.exports = {
-    token: "ODAxODYyNTMzNDA1MDgxNjEw.YAm2rQ.9I4FhVNBFbvLZNmPUOY_jBtDi38",
-    prefix: "."
-}
-```
-
----
-
-### Step 4 | Creating your Index and Config file.
+### Step 4 | Creating your Index file.
 
 1. Create a new folder and give it a name.
-    - EX `TutorialBot`.
+    - EX `MyBot`.
 
 2. Create a new file and name it `index.js`, leave it blank for now.
 
-1. Firstly, we need to define `Discord`, `token`, and `client`.
+3. Firstly, we need to define `Discord`, `token`, and `client`.
 ```js
 const Discord = require("discord.js");
 const { token } = require("../config/config.js");
 const client = new Discord.Client();
 ```
 
-2. Next we need to add our handlers. In this case we are passing in **aliases** and **commands** for our modular help command, and **console**, **commands**, and **event** as our handlers.
+4. Next we need to add our handlers. In this case we are passing in **aliases** and **commands** for our modular help command, and **console**, **commands**, and **event** as our handlers.
 ```js
 ["aliases", "commands"].forEach(x => client[x] = new Discord.Collection());
 ["console", "commands", "event"].forEach(x => require(`./handlers/${x}`)(client));
 ```
 
-3. We can finally log in to our bot using `token` which we have already defined.
+5. We can finally log in to our bot using `token` which we have already defined.
 ```js
 client.login(token);
 ```
 
 ---
+
+### Step 5 | Setting up your Config file.
+
+1. Create a new file in your bot folder and name it `config.js`.
+
+2. Copy the code below and fill replace `your-token` and `your-prefix`.
+```js
+module.exports = {
+    token: "your-token",
+    prefix: "your-prefix"
+}
+```
+
+
+Example:
+```js
+module.exports = {
+    token: "ODAxODYyNTMzNDA1MDgxNjEw.YAm2rQ.9I4FhVNBFbvLZNmPUOY_jBtDi38",
+    prefix: "!"
+}
+```
 
 ### Events
 
