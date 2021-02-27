@@ -35,7 +35,7 @@ In order to work with the Discord.js library and Discord API, we must first crea
 ![armful#0001](https://i.imgur.com/QCWJmXb.png)
 
 7. Under `Authorization Flow` keep the default settings for `Public Bot` checked and `Require OAuth2 Code Grant` unchecked.
-8. 
+
 ![armful#0001](https://i.imgur.com/DiYGRyo.png)
 
 8. Under `Privileged Gateway Intents` check both `Presence Intent`and `Server Members Intent`.
@@ -51,13 +51,16 @@ In order to work with the Discord.js library and Discord API, we must first crea
 2. A new menu labeled `Bot Permissions` will appear, tick `Administrator`.
 
 3. A URL will be generated in the `scopes` menu, click `copy` and paste the URL into a new tab.
+
 ![armful#0001](https://i.imgur.com/hkL38da.png)
 
 4. Click `Select a server`, choose a server to invite your bot to, and click `Continue`.
+
 ![armful#0001](https://i.imgur.com/VOvuf88.png)
 
 5. Make sure `Administrator` is checked and click `Authorize`.
     - You might be prompted with a Captcha challenge, just complete it and move on.
+
 ![armful#0001](https://i.imgur.com/utr3BQx.png)
 
 ### Step 3 | Setting up your Bot folder and Installing discord.js.
