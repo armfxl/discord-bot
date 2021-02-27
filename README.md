@@ -35,9 +35,11 @@ In order to work with the Discord.js library and Discord API, we must first crea
 ![armful#0001](https://i.imgur.com/QCWJmXb.png)
 
 7. Under `Authorization Flow` keep the default settings for `Public Bot` checked and `Require OAuth2 Code Grant` unchecked.
+8. 
 ![armful#0001](https://i.imgur.com/DiYGRyo.png)
 
 8. Under `Privileged Gateway Intents` check both `Presence Intent`and `Server Members Intent`.
+
 ![armful#0001](https://i.imgur.com/U1aWMhf.png)
 
 ---
