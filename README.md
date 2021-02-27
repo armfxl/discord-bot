@@ -73,7 +73,7 @@ module.exports = {
 const Discord = require("discord.js");
 
 // Here we load the token and prefix from the config file.
-const { token, prefix } = require("../config/config.js");
+const { token, prefix } = require("../config/config");
 
 // This is your client. When you see 'client.something' this is what we're refering to.
 const client = new Discord.Client();
