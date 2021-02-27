@@ -7,14 +7,14 @@ Make sure you have installed [NPM](https://www.npmjs.com/get-npm) before followi
 ###### What will we go over in this guide?
 - Installing NPM.
 - Creating a Discord Bot account.
-- Setting up required files and folders.
-- Creating basic commands.
+- Setting up required files.
 
 ### Step 1 | Creating the bot.
 
 In order to work with the Discord.js library and Discord API, we must first create a Discord Bot account.
 
 1. Make sure you are logged in to [Discord](https://discord.com).
+
 2. Head over to the [Application Page](https://discord.com/developers/applications).
 
 3. Click the `New Application` button.
@@ -26,7 +26,7 @@ In order to work with the Discord.js library and Discord API, we must first crea
 ![armful#0001](https://i.imgur.com/uez6R6g.png)
 
 5. Navigate to the `Bot` tab and click `Add Bot`.
-    - You will be promted with a confirmation window, press `Yes, do it!`.
+    - You will be promted with a confirmation window, click `Yes, do it!`.
 
 ![armful#0001](https://i.imgur.com/v4lV2uR.png)
 
@@ -34,11 +34,31 @@ In order to work with the Discord.js library and Discord API, we must first crea
 
 ![armful#0001](https://i.imgur.com/QCWJmXb.png)
 
-Keep the default settings for `Public Bot` checked and `Require OAuth2 Code Grant` unchecked.
+7. Under `Authorization Flow` keep the default settings for `Public Bot` checked and `Require OAuth2 Code Grant` unchecked.
+![armful#0001](https://i.imgur.com/DiYGRyo.png)
+
+8. Under `Privileged Gateway Intents` check both `Presence Intent`and `Server Members Intent`.
+![armful#0001](https://i.imgur.com/U1aWMhf.png)
 
 ---
 
-### Step 2 | Setting up your Bot folder and Installing discord.js.
+### Step 2 | Inviting your bot to a server.
+
+1. Navigate to the `OAuth2` tab, scroll down to `scopes`, and tick `bot`.
+
+2. A new menu labeled `Bot Permissions` will appear, tick `Administrator`.
+
+3. A URL will be generated in the `scopes` menu, click `copy` and paste the URL into a new tab.
+![armful#0001](https://i.imgur.com/hkL38da.png)
+
+4. Click `Select a server`, choose a server to invite your bot to, and click `Continue`.
+![armful#0001](https://i.imgur.com/VOvuf88.png)
+
+5. Make sure `Administrator` is checked and click `Authorize`.
+    - You might be prompted with a Captcha challenge, just complete it and move on.
+![armful#0001](https://i.imgur.com/utr3BQx.png)
+
+### Step 3 | Setting up your Bot folder and Installing discord.js.
 
 1. Create a new folder and give it a name.
 
@@ -51,7 +71,7 @@ Keep the default settings for `Public Bot` checked and `Require OAuth2 Code Gran
 
 ---
 
-### Step 3 | Setting up your Config file.
+### Step 4 | Setting up your Config file.
 
 2. Within your bot folder create another folder and name it `config`.
 
@@ -95,12 +115,12 @@ const client = new Discord.Client();
 ```js
 client.on('ready', () => {
 
-// This event will run if the bot starts and logs in successfully.
-console.log(`${client.user.username} is online and serving ${client.users.cache.size} user(s).`);
+    // This event will run if the bot starts and logs in successfully.
+    console.log(`${client.user.username} is online and serving ${client.users.cache.size} user(s).`);
     
-// This will change the bot's status.
-// In this case we will display how many users have access to the bot.
-client.user.setActivity(`${client.users.cache.size} users.`, {   type: 'WATCHING'   });
+    // This will change the bot's status.
+    // In this case we will display how many users have access to the bot.
+    client.user.setActivity(`${client.users.cache.size} users.`, {   type: 'WATCHING'   });
     
 });
 ```
@@ -110,34 +130,32 @@ client.user.setActivity(`${client.users.cache.size} users.`, {   type: 'WATCHING
 // This event will run on every single message received.
 client.on('message', async message => {
 
-// It's common practice to ignore other bots, this also makes your bot ignore itself.
-if(message.author.bot) return;
+    // It's common practice to ignore other bots, this also makes your bot ignore itself.
+    if(message.author.bot) return;
     
-// This ignores any message that does not start with our prefix.
-if(!message.content.startsWith(prefix)) return;
+    // This ignores any message that does not start with our prefix.
+    if(!message.content.startsWith(prefix)) return;
     
-// This will separate our command name and our arguments for the command.
-// As an example, if our command is ".say hello world", we would get the following;
-// command = say
-// args = ['hello', 'world']
-const args = message.content.slice(prefix.length).trim().split(/ +/g);
-const command = args.shift().toLowerCase();
+    // This will separate our command name and our arguments for the command.
+    // As an example, if our command is ".say hello world", we would get the following;
+    // command = say
+    // args = ['hello', 'world']
+    const args = message.content.slice(prefix.length).trim().split(/ +/g);
+    const command = args.shift().toLowerCase();
     
-// Let's make a simple command to make sure the bot works properly.
-if (command === 'ping') {
+    // Let's make a simple command to make sure the bot works properly.
+    if (command === 'ping') {
         
-const msg = await message.channel.send('Calculating ping...');
-msg.edit(`Latency: \`${msg.createdTimestamp - message.createdTimestamp}ms\`\nAPI Latency: \`${Math.round(client.ws.ping)}ms\``);
+        const msg = await message.channel.send('Calculating ping...');
+        msg.edit(`Latency: \`${msg.createdTimestamp - message.createdTimestamp}ms\`\nAPI Latency: \`${Math.round(client.ws.ping)}ms\``);
 
-}
-
+    }
 });
 ```
 
 5. We can finally log in to our bot using `token` which we have already defined.
 ```js
-// Logs in using your token.
-client.login(token);
+client.login(token); // Logs in using your token.
 ```
 
 ---
@@ -153,8 +171,8 @@ const Discord = require("discord.js");
 
 module.exports = async client => {
 
-console.log(`made by: armful#0001`);
-console.log(`${client.user.username} is online and serving ${client.users.cache.size} user(s).`);
+    console.log(`made by: armful#0001`);
+    console.log(`${client.user.tag} is active in ${client.guilds.cache.size} server(s)\nServing ${client.users.cache.size} user(s).`);
 
 client.user.setActivity(`by armful#0001`, { type:"WATCHING" });
 
