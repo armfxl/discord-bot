@@ -15,7 +15,7 @@ Feel free to just download the code and take the parts you need if you are not i
 - Handling message events.
 - Making a simple test command.
 
-##### Optionally, if you are up for the challenge:
+###### Optionally, if you are up for the challenge:
 - Making a command and event handler.
 - How to make commands within the command handler.
 - Making a modular **help** command.
