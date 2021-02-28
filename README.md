@@ -2,12 +2,18 @@
 This guide will get you started with Discord.js development, setting you up with a decent bot template.  
 Feel free to just download the code and take the parts you need if you are not interested in following the guide, or if you already know what you are doing.
 
-Make sure you have installed [NPM](https://www.npmjs.com/get-npm) before following this guide.
+###### Before you follow this guide:
+- Make sure you have installed [NPM](https://www.npmjs.com/get-npm).
+- Make sure you have a code editor, I recommend [Visual Studio Code](https://code.visualstudio.com/).
+- Have a basic understanding of Command Prompt and Windows 10.
 
 ###### What will we go over in this guide?
 - Installing NPM.
 - Creating a Discord Bot account.
 - Setting up required files.
+- Logging when our bot goes online.
+- Handling message events.
+- Creating a simple test command.
 
 ### Step 1 | Creating the bot.
 
