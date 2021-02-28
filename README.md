@@ -13,11 +13,13 @@ Feel free to just download the code and take the parts you need if you are not i
 - Setting up required files.
 - Logging when our bot goes online.
 - Handling message events.
-- Creating a simple test command.
-    - Optionally:
-    - Making a command and event handler.
-    - Making a modular **help** command.
-    - Logging basic events.
+- Making a simple test command.
+
+##### Optionally, if you are up for the challenge:
+- Making a command and event handler.
+- How to make commands within the command handler.
+- Making a modular **help** command.
+- Logging basic events.
 
 ### Step 1 | Creating the bot.
 
