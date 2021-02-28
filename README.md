@@ -76,7 +76,11 @@ Okay, so we have created a bot user and invited it to a server. You might notice
 1. Create a new folder and give it a name.
     - EX: `bot`
 
+![armful#0001](https://i.imgur.com/um7kpVE.png)
+
 2. Within your bot folder, create a new folder and name it **config**.
+
+![armful#0001](https://i.imgur.com/641XcNI.png)
 
 3. Open `Command Prompt` and navigate to your bot folder using `cd file-path`.
     - EX: `cd D:\bots\bot`
