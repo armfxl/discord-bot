@@ -1,5 +1,6 @@
 ## Discord.js Bot Guide
-This guide will get you started with Discord.js development, setting you up with a decent bot template.  
+This guide will get you started with Discord.js development, so if you have been wanting to get into it, this is the guide for you!  
+Keep in mind, this guide is targeted towards people who might not have a great understanding of how discord.js, or development in general works.
 Feel free to just download the code and take the parts you need if you are not interested in following the guide, or if you already know what you are doing.
 
 ###### Before you follow this guide:
