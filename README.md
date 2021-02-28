@@ -63,6 +63,14 @@ In order to work with the Discord.js library and Discord API, we must first crea
 
 ![armful#0001](https://i.imgur.com/utr3BQx.png)
 
+6. Done! Your bot should appear in your server.
+
+![armful#0001](https://i.imgur.com/kz1LfZc.png)
+
+Okay, so we have created a bot user and invited it to a server. Next we need to set up our bot folder so that we can get coding and start the bot.
+
+![armful#0001](https://i.imgur.com/w36oAlU.png)
+
 ### Step 3 | Setting up your Bot folder and Installing discord.js.
 
 1. Create a new folder and give it a name.
