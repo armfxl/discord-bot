@@ -98,7 +98,11 @@ Okay, so we have created a bot user and invited it to a server. You might notice
 3. Open `Command Prompt` and navigate to your bot folder using `cd file-path`.
     - EX: `cd D:\bots\bot`
 
+![armful#0001](https://i.imgur.com/3EArB54.png)
+
 4. Install `discord.js` using `npm i discord.js`.
+
+![armful#0001](https://i.imgur.com/4IaeWbk.png)
 
 ---
 
