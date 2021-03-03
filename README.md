@@ -249,6 +249,14 @@ client.login(token);
   
 </details>
 
+At this point you have a functioning bot
+
+---
+
+### Step 6 | Adding a command and event handler.
+
+1. 
+
 ---
 
 ### Events
