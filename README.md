@@ -1,6 +1,8 @@
 ## Discord.js Bot Guide
 This guide will get you started with Discord.js development, so if you have been wanting to get into it, this is the guide for you!  
+
 Keep in mind, this guide is targeted towards people who might not have a great understanding of how discord.js, or coding in general works.  
+
 Feel free to just download the code and take the parts you need if you are not interested in following the guide, or if you already know what you are doing. Although I recommend following the guide if you are new as it will teach you a lot of the basics.
 
 ###### Before you follow this guide:
@@ -249,7 +251,18 @@ client.login(token);
   
 </details>
 
-At this point you have a functioning bot
+At this point you have a functioning bot that will run and respond to your `ping` command. You can easily add commands using the following format;
+
+```js
+// Replace 'test' with your desired command name.
+if (command === 'test') {
+        
+// Your code goes here.
+// Example:
+message.channel.send('test');
+
+}
+```
 
 ---
 
