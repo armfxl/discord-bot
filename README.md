@@ -266,6 +266,17 @@ message.channel.send('test');
 
 ---
 
+### Step 6 | Running the bot.
+
+1. Open `Command Prompt` and navigate to your bot folder using `cd file-path`.
+    - EX: `cd D:\bots\bot`
+
+![armful#0001](https://i.imgur.com/3EArB54.png)
+
+2. Type `node index` and your bot should run.
+
+---
+
 ### The command and event handler guide is in the works.
 
 ### By: [armful#0001](https://github.com/armfxl)
