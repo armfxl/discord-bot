@@ -110,11 +110,9 @@ Okay, so we have created a bot user and invited it to a server. You might notice
 
 ### Step 4 | Setting up your Config file.
 
-2. Within your bot folder create another folder and name it `config`.
+1. Within your config folder, create a new file and name it `config.js`.
 
-3. Create a new file in your config folder and name it `config.js`.
-
-4. Copy the code below and replace `your-token` with your bot's token, and `your-prefix` with your desired prefix.
+2. Copy the code below and replace `your-token` with your bot's token, and `your-prefix` with your desired prefix.
 ```js
 module.exports = {
     token: "your-token",
